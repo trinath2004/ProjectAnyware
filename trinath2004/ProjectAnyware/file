@@ -1,0 +1,1 @@
+"json_content = {     \"environment\": \"QA\",     \"application_url\": \"https://example.com/login\",     \"credentials\": {         \"valid_user\": {             \"username\": \"admin\",             \"password\": \"Admin@123\"         },         \"invalid_user\": {             \"username\": \"wronguser\",             \"password\": \"wrongpass\"         }     } }"
