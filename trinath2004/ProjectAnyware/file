@@ -1,1 +1,96 @@
-"json_content = {     \"environment\": \"QA\",     \"application_url\": \"https://example.com/login\",     \"credentials\": {         \"valid_user\": {             \"username\": \"admin\",             \"password\": \"Admin@123\"         },         \"invalid_user\": {             \"username\": \"wronguser\",             \"password\": \"wrongpass\"         }     } }"
+{
+  "test_plan": {
+    "id": "TP-001",
+    "title": "Sample Python App Test Plan",
+    "introduction": "This test plan covers all modules of the Sample Python App, including Calculator and UserManager functionalities.",
+    "scope": {
+      "in_scope": [
+        "Calculator module",
+        "UserManager module",
+        "Integration testing"
+      ],
+      "out_of_scope": [
+        "Performance testing",
+        "Security testing"
+      ]
+    },
+    "approach": "Automated testing based on code analysis and requirements.",
+    "environment": "Python 3.8+ development environment",
+    "data_strategy": "Valid and invalid inputs for all modules",
+    "entry_criteria": "Codebase ready and environment set up",
+    "exit_criteria": "All critical test cases passed",
+    "deliverables": [
+      "Test Plan document",
+      "Test Scenarios document",
+      "Execution Report",
+      "Defect Report"
+    ],
+    "risks": [
+      "Limited coverage due to time constraints",
+      "Edge case defects"
+    ],
+    "assumptions": [
+      "Application is stable and functional"
+    ],
+    "mitigation": [
+      "Prioritize critical scenarios",
+      "Perform exploratory testing for edge cases"
+    ],
+    "roles": {
+      "QA Architect": "Create test plan and scenarios",
+      "QA Engineer": "Execute test cases and report defects",
+      "Developer": "Fix reported defects"
+    }
+  },
+  "test_scenarios": [
+    {
+      "module": "Calculator",
+      "id": "TC-001",
+      "description": "Verify addition of two positive numbers",
+      "preconditions": "Calculator module is loaded",
+      "expected_outcome": "Correct sum is returned"
+    },
+    {
+      "module": "Calculator",
+      "id": "TC-002",
+      "description": "Verify multiplication of two positive numbers",
+      "preconditions": "Calculator module is loaded",
+      "expected_outcome": "Correct product is returned"
+    },
+    {
+      "module": "Calculator",
+      "id": "TC-003",
+      "description": "Verify division of a number by a non-zero number",
+      "preconditions": "Calculator module is loaded",
+      "expected_outcome": "Correct quotient is returned"
+    },
+    {
+      "module": "Calculator",
+      "id": "TC-004",
+      "description": "Verify division by zero raises ValueError",
+      "preconditions": "Calculator module is loaded",
+      "expected_outcome": "ValueError is raised with message 'Cannot divide by zero'"
+    },
+    {
+      "module": "UserManager",
+      "id": "TC-005",
+      "description": "Verify adding a user with name and email",
+      "preconditions": "UserManager module is initialized",
+      "expected_outcome": "User is added to the list"
+    },
+    {
+      "module": "UserManager",
+      "id": "TC-006",
+      "description": "Verify retrieving all users",
+      "preconditions": "UserManager module has at least one user added",
+      "expected_outcome": "List of all users is returned"
+    },
+    {
+      "module": "Integration",
+      "id": "TC-007",
+      "description": "Verify integration between Calculator and UserManager modules",
+      "preconditions": "Both modules are loaded and functional",
+      "expected_outcome": "Modules interact without errors"
+    }
+  ]
+}
